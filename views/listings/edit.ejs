@@ -1,0 +1,59 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+        <h3>Edit Your Listing</h3>
+    <form method="post" action="/listings/<%= d._id %>/?_method=PATCH" novalidate class="needs-validation">
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input name="title" value="<%= d.title %>" class="form-control"  type="text" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Please Enter Correct Title</div>
+            <br></br>
+        </div>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" type="text" class="form-control" required><%= d.description %></textarea>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Please Enter a Short Description</div>
+            <br></br>
+        </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input name="price" value="<%= d.price %>" class="form-control"  type="number" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Price Should be Correct</div>
+            <br></br>
+        </div>
+        <div class="col-md-8">
+            <label for="country" class="form-label">country</label>
+            <input name="country" value="<%= d.country %>" class="form-control" type="text" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Country Should be Correct</div>
+            <br></br>
+        </div>
+    </div>
+        <div>
+            <label for="image" class="form-label">Image URL</label>
+            <input name="image" value="<%= d.image %>" class="form-control" type="text" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Image Link Should be correct</div>
+            <br></br>
+        </div>
+        <div>
+            <label for="location" class="form-label">Location</label>
+            <input name="location" value="<%= d.location %>" class="form-control" type="text" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Location Should be Correct</div>
+            <br></br>
+        </div>
+        
+        <div>
+            <button class="btn btn-dark edit-btn">Edit</button>
+            <br></br>
+        </div>
+    </form>
+   </div>
+</div>
+

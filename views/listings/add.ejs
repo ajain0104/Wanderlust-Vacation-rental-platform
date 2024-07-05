@@ -1,0 +1,58 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+    <h3>Create New Listing</h3>
+    <form method="post" action="/listings" novalidate class="needs-validation">
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input placeholder="Enter title" name="title" type="text" class="form-control" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Please Enter Correct Title</div>
+            <br/>
+        </div>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea placeholder="Enter Description" name="description" type="text" class="form-control" required></textarea>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Please Enter a Short Description</div>
+            <br/>
+        </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input placeholder="Enter price" name="price" type="number" class="form-control" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Price Should be Correct</div>
+            <br/>
+        </div>
+        <div class="col-md-8">
+            <label for="country" class="form-label">country</label>
+            <input placeholder="Enter country" name="country" type="text" class="form-control" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Country Should be Correct</div>
+            <br/>
+        </div>
+    </div>
+        <div>
+            <label for="image" class="form-label">Image URL</label>
+            <input placeholder="Enter Image URL" name="image" type="text" class="form-control" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Image URL Should be Correct</div>
+            <br/>
+        </div>
+        <div>
+            <label for="location" class="form-label">Location</label>
+            <input placeholder="Enter location" name="location" type="text" class="form-control" required/>
+            <div class="valid-feedback">Looks Good</div>
+            <div class="invalid-feedback">Location Should be Correct</div>
+            <br/>
+        </div>
+        
+        <div>
+            <button class="btn btn-dark add-btn">Add</button>
+            <br/><br/>
+        </div>
+    </form>
+    </div>
+</div>
